@@ -17,9 +17,24 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              CircleAvatar(
-                radius: 60,
-                backgroundImage: AssetImage('assets/me.jpg'),
+              Container(
+                padding: const EdgeInsets.all(4),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: const Color(0xFF38BDF8), width: 3),
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0xFF38BDF8).withOpacity(0.4),
+                      blurRadius: 20,
+                      spreadRadius: 2,
+                    ),
+                  ],
+                ),
+
+                child: CircleAvatar(
+                  radius: 60,
+                  backgroundImage: AssetImage('assets/me.jpg'),
+                ),
               ),
 
               const SizedBox(height: 16),
@@ -35,10 +50,15 @@ class MyApp extends StatelessWidget {
               ),
 
               const Text(
-                'A student aspiring programmer/developer',
+                'Student - aspiring programmer/developer',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 22, color: Colors.white70),
               ),
+
+              const SizedBox(height: 20),
+
+              // GIF section
+              Image.asset('assets/1.gif', width: 120, fit: BoxFit.contain),
             ],
           ),
         ),
