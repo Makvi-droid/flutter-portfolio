@@ -6,6 +6,9 @@ class AboutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 48),
+
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: const [
@@ -21,8 +24,8 @@ class AboutSection extends StatelessWidget {
           SizedBox(height: 20),
 
           Text(
-            'I am a BSIT student passionate about frontend and mobile development. '
-            'I enjoy building clean, user-friendly interfaces and continuously '
+            'I am a BSIT student passionate about anything programming related projects '
+            'I enjoy building and experimenting programs and continuously '
             'learning new technologies. I am currently exploring Flutter while '
             'strengthening my skills in JavaScript and React.',
             textAlign: TextAlign.center,
