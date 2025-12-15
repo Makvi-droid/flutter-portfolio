@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'hero_section.dart';
 import 'about_section.dart';
+import 'skills_section.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,9 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: const Color(0xFF0F172A),
         body: SingleChildScrollView(
-          child: Column(children: [HeroSection(), AboutSection()]),
+          child: Column(
+            children: [HeroSection(), AboutSection(), SkillsSection()],
+          ),
         ),
       ),
     );
