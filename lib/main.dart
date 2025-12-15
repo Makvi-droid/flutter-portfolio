@@ -11,7 +11,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: Container(color: Colors.red)),
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CircleAvatar(
+                radius: 60,
+                backgroundImage: AssetImage('assets/me.jpg'),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
